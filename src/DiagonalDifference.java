@@ -17,6 +17,9 @@ public class DiagonalDifference {
 		scan.close();
 	}
 	
+	// *
+	//   *
+	//     *
 	public static int leftDiagonalAdd(int[][] matrix) {
 		int leftDiagonalSum = 0;
 		for(int i = 0; i < arrSize; i++) {
@@ -25,6 +28,9 @@ public class DiagonalDifference {
 		return leftDiagonalSum;
 	}
 	
+	//      *
+	//    *
+	//  *
 	public static int rightDiagonalAdd(int[][] matrix) {
 		int rightDiagonalSum = 0;
 		for(int i = 0; i < arrSize; i++) {
