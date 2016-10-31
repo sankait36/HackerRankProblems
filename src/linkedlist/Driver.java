@@ -1,14 +1,15 @@
 package linkedlist;
 
 public class Driver {
-	private static Node head = null;
+	//private static Node head = null;
 	public static void main(String[] args) {
-		//This isn't meant to run, the main logic is in Node.java
 		//Node caller = new Node();
-		//int data = 2;
 		//caller.insertAtHead(head, data);
 		//caller.insertAtPosition(head, data, 3);
-		//caller.insertAtTail(head, data);q
+		//head = caller.insertAtTail(head, 2);
+		//head = caller.insertAtTail(head, 0);
+		//head = caller.insertAtTail(head, 3);
 		//caller.delete(head, 0);
+		//head = caller.reverseList(head);
 	}
 }

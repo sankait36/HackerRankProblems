@@ -78,9 +78,7 @@ public class Node {
 	public Node delete(Node head, int position) {
 	    if(head != null) {
 	        if (position == 0) { //At head
-	            //Node temp = head;
 	            head = head.next;
-	            //delete temp;
 	        }
 	        else {
 	            Node iterator = head;
@@ -88,17 +86,43 @@ public class Node {
 	                iterator = iterator.next;
 	            }
 	            if (iterator.next.next == null) { //Check the tail
-	                //Node temp = iterator.next;
 	                iterator.next = null;
-	                //delete temp;
 	            }
 	            else { //In middle
-	                //Node temp = iterator.next;
 	                iterator.next = iterator.next.next;
-	                //delete temp;
 	            }
 	        }
 	    }
+	    return head;
+	}
+	
+	public void printReverse(Node head) {
+		if(head != null) {
+			printReverse(head.next);
+			System.out.println(head.data);
+		}
+	}
+	
+	Node reversal = null;
+	public Node reverseList(Node head) {
+	    if(head != null) {
+	    	reverseList(head.next);
+	        if(reversal == null) {
+	        	reversal = new Node();
+	        	reversal.data = head.data;
+	        	reversal.next = null;
+	        }
+	        else {
+	            Node iterator = reversal;
+	            while(iterator.next != null) {
+	                iterator = iterator.next;
+	            }
+	            iterator.next = new Node();
+	            iterator.next.data = head.data;
+	            iterator.next.next = null;
+	        }
+	    }
+	    head = reversal;
 	    return head;
 	}
 }
