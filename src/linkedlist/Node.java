@@ -125,4 +125,21 @@ public class Node {
 	    head = reversal;
 	    return head;
 	}
+	
+	public int CompareLists(Node headA, Node headB) {
+	    Node tempA = headA;
+	    Node tempB = headB;
+	    
+	    while(tempA != null && tempB != null) {
+	        if(tempA.data != tempB.data) {
+	            return 0;
+	        }
+	        tempA = tempA.next;
+	        tempB = tempB.next;
+	    }
+	    if(tempA != tempB ) {
+	        return 0;
+	    }
+	    return 1;
+	}
 }
